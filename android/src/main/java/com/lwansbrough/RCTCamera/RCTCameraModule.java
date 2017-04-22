@@ -319,10 +319,11 @@ public class RCTCameraModule extends ReactContextBaseJavaModule
         }
         mMediaRecorder.setOutputFile(mVideoFile.getPath());
 
-        if (options.hasKey("totalSeconds")) {
-            int totalSeconds = options.getInt("totalSeconds");
-            mMediaRecorder.setMaxDuration(totalSeconds * 1000);
-        }
+        mMediaRecorder.setMaxDuration(2500);
+        // if (options.hasKey("totalSeconds")) {
+        //     int totalSeconds = options.getInt("totalSeconds");
+        //     mMediaRecorder.setMaxDuration(totalSeconds * 1000);
+        // }
 
         if (options.hasKey("maxFileSize")) {
             int maxFileSize = options.getInt("maxFileSize");
